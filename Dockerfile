@@ -36,6 +36,8 @@ RUN adduser --disabled-password --gecos '' --uid $USER --gid $USER graphana
 RUN chown -R $USER .
 USER graphana
 
+#./grafana-server --config custom.ini
 ENTRYPOINT ["./bin/grafana-server" ,"web"]
 
-
+#Configuration ini  users, plugins, cluster binding
+#Dashboard ini
